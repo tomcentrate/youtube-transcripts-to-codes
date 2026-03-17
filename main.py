@@ -1,5 +1,3 @@
-import decimal
-
 from youtube_transcript_api import YouTubeTranscriptApi
 import sys
 import time
@@ -46,12 +44,12 @@ def download_transcript(videoId, style):
         else:
             full_transcript += " " + snippet.text
 
-    print(full_transcript)
+    return full_transcript
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        download_transcript(sys.argv[1], sys.argv[2])
+        print(download_transcript(sys.argv[1], sys.argv[2]))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
